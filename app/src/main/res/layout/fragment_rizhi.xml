@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y20"
+        android:background="@color/bgddd"
+        android:weightSum="7">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二定位"
+            android:textColor="@color/text000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="三定位"
+            android:textColor="@color/text000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="四定位"
+            android:textColor="@color/text000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="二字现"
+            android:textColor="@color/text000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="三字现"
+            android:textColor="@color/text000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="四字定"
+            android:textColor="@color/text000" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="全部"
+            android:textColor="@color/textred" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/text999"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y20"
+        android:background="@color/bgddd"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="笔数"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="金额"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="详细"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="生成"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/bgtitle"
+            android:gravity="center"
+            android:text="常用"
+            android:textColor="@color/bgfff" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/text999"></View>
+</LinearLayout>

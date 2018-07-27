@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y20"
+        android:background="@color/bgddd"
+        android:padding="@dimen/x3"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="期号"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="金额"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="回水"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="中奖"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="盈亏"
+            android:textColor="@color/text000" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/text999"></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y20"
+        android:padding="@dimen/x3"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="18086"
+            android:textColor="@color/textred" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="--"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="--"
+            android:textColor="@color/text000" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/text999"></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y20"
+        android:padding="@dimen/x3"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="合计0"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text000" />
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/text999"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text000" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:background="@color/text999"></View>
+
+
+</LinearLayout>

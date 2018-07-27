@@ -7,8 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
-import com.sakuraprint2.Fragment.DemoFragment;
-import com.sakuraprint2.Fragment.ErZiDingFragment;
+import com.sakuraprint2.Fragment.KuaiDaFragment;
+import com.sakuraprint2.Fragment.MingXiFragment;
+import com.sakuraprint2.Fragment.RiZhiFragment;
+import com.sakuraprint2.Fragment.ZhangDanFragment;
+import com.sakuraprint2.Fragment.ZiLiaoFragment;
 import com.sakuraprint2.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentPagerItemAdapter adapter = new FragmentPagerItemAdapter(
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
-                .add(R.string.a1, DemoFragment.class)
-                .add(R.string.a2, ErZiDingFragment.class)
-                .add(R.string.a3, DemoFragment.class)
-                .add(R.string.a4, DemoFragment.class)
-                .add(R.string.a5, DemoFragment.class)
-                .add(R.string.a6, DemoFragment.class)
+                .add(R.string.a1, MingXiFragment.class)
+                .add(R.string.a3, KuaiDaFragment.class)
+                .add(R.string.a4, KuaiDaFragment.class)
+                .add(R.string.a5, ZiLiaoFragment.class)
+                .add(R.string.a6, ZhangDanFragment.class)
+                .add(R.string.a7, RiZhiFragment.class)
                 .create());
 
         viewpager.setAdapter(adapter);

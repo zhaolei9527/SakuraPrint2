@@ -6,9 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItem;
 import com.sakuraprint2.R;
 
 
@@ -19,20 +17,17 @@ import com.sakuraprint2.R;
  * @date 2018/7/21
  * 功能描述：
  */
-public class DemoFragment extends Fragment {
+public class ZhangDanFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_demo, container, false);
+        return inflater.inflate(R.layout.fragment_zhangdan, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        int position = FragmentPagerItem.getPosition(getArguments());
-        TextView title = (TextView) view.findViewById(R.id.item_title);
-        title.setText(String.valueOf(position));
     }
 
 }

@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">SakuraPrint2</string>
-
+    <string name="app_name">奖虫</string>
     <string name="a1">明细</string>
     <string name="a2">二字定</string>
     <string name="a3">快打</string>
     <string name="a4">快选</string>
     <string name="a5">资料</string>
-    <string name="a6">日志</string>
+    <string name="a6">账单</string>
+    <string name="a7">日志</string>
     <string name="loading">加载中......</string>
 
 </resources>
