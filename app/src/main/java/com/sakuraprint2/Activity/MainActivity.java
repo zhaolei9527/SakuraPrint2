@@ -3,10 +3,12 @@ package com.sakuraprint2.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItemAdapter;
 import com.ogaclejapan.smarttablayout.utils.v4.FragmentPagerItems;
 import com.sakuraprint2.Fragment.KuaiDaFragment;
+import com.sakuraprint2.Fragment.KuaiXuanFragment;
 import com.sakuraprint2.Fragment.MingXiFragment;
 import com.sakuraprint2.Fragment.RiZhiFragment;
 import com.sakuraprint2.Fragment.ZhangDanFragment;
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 getSupportFragmentManager(), FragmentPagerItems.with(this)
                 .add(R.string.a1, MingXiFragment.class)
                 .add(R.string.a3, KuaiDaFragment.class)
-                .add(R.string.a4, KuaiDaFragment.class)
+                .add(R.string.a4, KuaiXuanFragment.class)
                 .add(R.string.a5, ZiLiaoFragment.class)
                 .add(R.string.a6, ZhangDanFragment.class)
                 .add(R.string.a7, RiZhiFragment.class)
