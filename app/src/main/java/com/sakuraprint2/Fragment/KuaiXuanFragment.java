@@ -91,10 +91,8 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fl_content, fragmentErDing);
                 transaction.commit();
-
                 tvErding.setBackgroundColor(getResources().getColor(R.color.bgtitle));
                 tvErding.setTextColor(getResources().getColor(R.color.bgfff));
-
                 tvSanding.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvSanding.setTextColor(getResources().getColor(R.color.text333));
                 tvSiding.setBackgroundColor(getResources().getColor(R.color.bgfff));
@@ -113,10 +111,8 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fl_content, fragmentSanDing);
                 transaction.commit();
-
                 tvSanding.setBackgroundColor(getResources().getColor(R.color.bgtitle));
                 tvSanding.setTextColor(getResources().getColor(R.color.bgfff));
-
                 tvErding.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvErding.setTextColor(getResources().getColor(R.color.text333));
                 tvSiding.setBackgroundColor(getResources().getColor(R.color.bgfff));
@@ -127,7 +123,6 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 tvSanxian.setTextColor(getResources().getColor(R.color.text333));
                 tvSixian.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvSixian.setTextColor(getResources().getColor(R.color.text333));
-
                 break;
             case R.id.tv_siding:
                 SiDingFragment fragmentSiDing = new SiDingFragment();
@@ -135,10 +130,8 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fl_content, fragmentSiDing);
                 transaction.commit();
-
                 tvSiding.setBackgroundColor(getResources().getColor(R.color.bgtitle));
                 tvSiding.setTextColor(getResources().getColor(R.color.bgfff));
-
                 tvErding.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvErding.setTextColor(getResources().getColor(R.color.text333));
                 tvSanding.setBackgroundColor(getResources().getColor(R.color.bgfff));
@@ -156,10 +149,8 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fl_content, fragmentErXian);
                 transaction.commit();
-
                 tvErxian.setBackgroundColor(getResources().getColor(R.color.bgtitle));
                 tvErxian.setTextColor(getResources().getColor(R.color.bgfff));
-
                 tvErding.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvErding.setTextColor(getResources().getColor(R.color.text333));
                 tvSanding.setBackgroundColor(getResources().getColor(R.color.bgfff));
@@ -177,10 +168,8 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fl_content, fragmentSanXian);
                 transaction.commit();
-
                 tvSanxian.setBackgroundColor(getResources().getColor(R.color.bgtitle));
                 tvSanxian.setTextColor(getResources().getColor(R.color.bgfff));
-
                 tvErding.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvErding.setTextColor(getResources().getColor(R.color.text333));
                 tvSanding.setBackgroundColor(getResources().getColor(R.color.bgfff));
@@ -198,10 +187,8 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 transaction = fragmentManager.beginTransaction();
                 transaction.replace(R.id.fl_content, fragmentSiXian);
                 transaction.commit();
-
                 tvSixian.setBackgroundColor(getResources().getColor(R.color.bgtitle));
                 tvSixian.setTextColor(getResources().getColor(R.color.bgfff));
-
                 tvErding.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvErding.setTextColor(getResources().getColor(R.color.text333));
                 tvSanding.setBackgroundColor(getResources().getColor(R.color.bgfff));
@@ -215,7 +202,6 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 break;
             default:
                 break;
-
         }
     }
 }
