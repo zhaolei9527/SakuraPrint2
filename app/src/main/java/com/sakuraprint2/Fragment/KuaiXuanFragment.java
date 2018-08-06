@@ -51,15 +51,12 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_kuaixuan, container, false);
         unbinder = ButterKnife.bind(this, view);
-
         tvErding.setOnClickListener(this);
         tvSanding.setOnClickListener(this);
         tvSiding.setOnClickListener(this);
-
         tvErxian.setOnClickListener(this);
         tvSanxian.setOnClickListener(this);
         tvSixian.setOnClickListener(this);
-
         ErDingFragment fragmentErDing = new ErDingFragment();
         fragmentManager = getFragmentManager();
         transaction = fragmentManager.beginTransaction();
@@ -67,7 +64,6 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
         transaction.commit();
         tvErding.setBackgroundColor(getResources().getColor(R.color.bgtitle));
         tvErding.setTextColor(getResources().getColor(R.color.bgfff));
-
         return view;
     }
 
@@ -103,7 +99,6 @@ public class KuaiXuanFragment extends Fragment implements View.OnClickListener {
                 tvSanxian.setTextColor(getResources().getColor(R.color.text333));
                 tvSixian.setBackgroundColor(getResources().getColor(R.color.bgfff));
                 tvSixian.setTextColor(getResources().getColor(R.color.text333));
-
                 break;
             case R.id.tv_sanding:
                 SanDingFragment fragmentSanDing = new SanDingFragment();
