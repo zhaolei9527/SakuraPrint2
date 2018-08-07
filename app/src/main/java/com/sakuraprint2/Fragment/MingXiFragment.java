@@ -250,6 +250,7 @@ public class MingXiFragment extends Fragment implements View.OnClickListener {
                 try {
 
 
+
                     result = null;
                 } catch (Exception e) {
                     e.printStackTrace();

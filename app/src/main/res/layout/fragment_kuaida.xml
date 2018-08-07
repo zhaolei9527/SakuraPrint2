@@ -32,10 +32,6 @@
                         android:text="目前停押"
                         android:textColor="@color/text333" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/y50" />
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -70,6 +66,7 @@
                             android:background="#DBD5D5"></View>
 
                         <CheckBox
+                            android:id="@+id/cb_checkalltingya"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center" />
@@ -86,407 +83,10 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="@dimen/x140"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/y25"
-                                android:weightSum="2">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:gravity="center"
-                                        android:text="--"
-                                        android:textColor="@color/text000" />
-
-                                    <CheckBox
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:visibility="invisible" />
-
-                                </RelativeLayout>
-
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/x1"
-                                android:background="#DBD5D5"></View>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="@dimen/x140"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/y25"
-                                android:weightSum="2">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:gravity="center"
-                                        android:text="--"
-                                        android:textColor="@color/text000" />
-
-                                    <CheckBox
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:visibility="invisible" />
-
-                                </RelativeLayout>
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/x1"
-                                android:background="#DBD5D5"></View>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="@dimen/x140"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/y25"
-                                android:weightSum="2">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:gravity="center"
-                                        android:text="--"
-                                        android:textColor="@color/text000" />
-
-                                    <CheckBox
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:visibility="invisible" />
-
-                                </RelativeLayout>
-
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/x1"
-                                android:background="#DBD5D5"></View>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="@dimen/x140"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/y25"
-                                android:weightSum="2">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:gravity="center"
-                                        android:text="--"
-                                        android:textColor="@color/text000" />
-
-                                    <CheckBox
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:visibility="invisible" />
-
-                                </RelativeLayout>
-
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/x1"
-                                android:background="#DBD5D5"></View>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="@dimen/x140"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/y25"
-                                android:weightSum="2">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:gravity="center"
-                                        android:text="--"
-                                        android:textColor="@color/text000" />
-
-                                    <CheckBox
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:visibility="invisible" />
-
-                                </RelativeLayout>
-
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/x1"
-                                android:background="#DBD5D5"></View>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="@dimen/x140"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/y25"
-                                android:weightSum="2">
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="1"
-                                    android:gravity="center"
-                                    android:text="--"
-                                    android:textColor="@color/text000" />
-
-                                <View
-                                    android:layout_width="@dimen/x1"
-                                    android:layout_height="match_parent"
-                                    android:background="#DBD5D5"></View>
-
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:gravity="center"
-                                        android:text="--"
-                                        android:textColor="@color/text000" />
-
-                                    <CheckBox
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center"
-                                        android:visibility="invisible" />
-
-                                </RelativeLayout>
-
-
-                            </LinearLayout>
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="@dimen/x1"
-                                android:background="#DBD5D5"></View>
-
-                        </LinearLayout>
-
+                        <com.sakuraprint2.View.WenguoyiRecycleView
+                            android:id="@+id/rv_tingya"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y220"></com.sakuraprint2.View.WenguoyiRecycleView>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -494,11 +94,13 @@
                             android:gravity="center">
 
                             <TextView
+                                android:id="@+id/tv_tingya_bishu"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="笔数：0" />
 
                             <TextView
+                                android:id="@+id/tv_tingya_money"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="@dimen/x5"
@@ -513,18 +115,19 @@
                             android:gravity="center">
 
                             <Button
+                                android:id="@+id/btn_fangda_tingya"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="放大" />
 
                             <Button
+                                android:id="@+id/btn_delete_tingya"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="@dimen/x5"
                                 android:text="删除" />
 
                         </LinearLayout>
-
 
                     </LinearLayout>
 
@@ -564,6 +167,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/x3"
@@ -571,6 +175,7 @@
                             android:text="时间：" />
 
                         <TextView
+                            android:id="@+id/tv_user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/x3"
@@ -578,6 +183,7 @@
                             android:text="会员：" />
 
                         <TextView
+                            android:id="@+id/tv_num"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/x3"
@@ -648,257 +254,10 @@
                             android:layout_height="@dimen/x1"
                             android:background="#DBD5D5"></View>
 
-                        <LinearLayout
+                        <com.sakuraprint2.View.WenguoyiRecycleView
+                            android:id="@+id/rv_dayin"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/y25"
-                            android:weightSum="3">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="#159A51" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/text000" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/textred" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/y25"
-                            android:weightSum="3">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="#159A51" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/text000" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/textred" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/y25"
-                            android:weightSum="3">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="#159A51" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/text000" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/textred" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/y25"
-                            android:weightSum="3">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="#159A51" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/text000" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/textred" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/y25"
-                            android:weightSum="3">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="#159A51" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/text000" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/textred" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/y25"
-                            android:weightSum="3">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="#159A51" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/text000" />
-
-                            <View
-                                android:layout_width="@dimen/x1"
-                                android:layout_height="match_parent"
-                                android:background="#DBD5D5"></View>
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:text="--"
-                                android:textColor="@color/textred" />
-
-                        </LinearLayout>
+                            android:layout_height="@dimen/y155"></com.sakuraprint2.View.WenguoyiRecycleView>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -906,11 +265,13 @@
                             android:gravity="center">
 
                             <TextView
+                                android:id="@+id/tv_dayin_bishu"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="笔数：0" />
 
                             <TextView
+                                android:id="@+id/tv_dayin_money"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="@dimen/x5"
@@ -925,11 +286,13 @@
                             android:gravity="center">
 
                             <Button
+                                android:id="@+id/btn_qingkong"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="清空" />
 
                             <Button
+                                android:id="@+id/btn_dayin"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="@dimen/x5"
@@ -938,6 +301,7 @@
                         </LinearLayout>
 
                         <TextView
+                            android:id="@+id/tv_qishu"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="第18806期，三天内有效" />
@@ -1008,138 +372,10 @@
                     android:layout_height="@dimen/x1"
                     android:background="#DBD5D5"></View>
 
-                <LinearLayout
+                <com.sakuraprint2.View.WenguoyiRecycleView
+                    android:id="@+id/rv_xiazhu"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/y25"
-                    android:background="#E9E7EA"
-                    android:weightSum="3">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="--"
-                        android:textColor="#159A51" />
-
-                    <View
-                        android:layout_width="@dimen/x1"
-                        android:layout_height="match_parent"
-                        android:background="#DBD5D5"></View>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="--"
-                        android:textColor="@color/text000" />
-
-                    <View
-                        android:layout_width="@dimen/x1"
-                        android:layout_height="match_parent"
-                        android:background="#DBD5D5"></View>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="--"
-                        android:textColor="@color/textred" />
-
-                    <RelativeLayout
-                        android:layout_width="@dimen/x60"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:gravity="center"
-                            android:text="--"
-                            android:textColor="@color/text000" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_gravity="center"
-                            android:visibility="invisible" />
-
-                    </RelativeLayout>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/x1"
-                    android:background="#DBD5D5"></View>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/y25"
-                    android:background="#E9E7EA"
-                    android:weightSum="3">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="--"
-                        android:textColor="#159A51" />
-
-                    <View
-                        android:layout_width="@dimen/x1"
-                        android:layout_height="match_parent"
-                        android:background="#DBD5D5"></View>
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="--"
-                        android:textColor="@color/text000" />
-
-                    <View
-                        android:layout_width="@dimen/x1"
-                        android:layout_height="match_parent"
-                        android:background="#DBD5D5"></View>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="--"
-                        android:textColor="@color/textred" />
-
-                    <RelativeLayout
-                        android:layout_width="@dimen/x60"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_centerInParent="true"
-                            android:gravity="center"
-                            android:text="--"
-                            android:textColor="@color/text000" />
-
-                        <CheckBox
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:layout_gravity="center"
-                            android:visibility="invisible" />
-
-                    </RelativeLayout>
-
-                </LinearLayout>
+                    android:layout_height="@dimen/y220"></com.sakuraprint2.View.WenguoyiRecycleView>
 
             </LinearLayout>
 
@@ -1155,8 +391,10 @@
                     android:orientation="vertical">
 
                     <EditText
+                        android:id="@+id/et_haoma"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:focusable="false" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1174,6 +412,7 @@
                     android:orientation="vertical">
 
                     <EditText
+                        android:id="@+id/et_money"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -1198,11 +437,13 @@
                         android:orientation="horizontal">
 
                         <CheckBox
+                            android:id="@+id/cb_sizixian"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="四字现" />
 
                         <CheckBox
+                            android:id="@+id/cb_quanzhuan"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="@dimen/x5"
@@ -1220,6 +461,7 @@
                             android:text="赔率：" />
 
                         <TextView
+                            android:id="@+id/peilv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=""
@@ -1237,6 +479,7 @@
                             android:text="可下：" />
 
                         <TextView
+                            android:id="@+id/kexia"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=""
