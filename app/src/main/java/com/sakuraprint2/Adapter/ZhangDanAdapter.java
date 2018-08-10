@@ -32,9 +32,9 @@ public class ZhangDanAdapter extends RecyclerView.Adapter<ZhangDanAdapter.ViewHo
         return datas;
     }
 
-    public ZhangDanAdapter(Activity context, List<ZhangDanBean.DataBeanX> msgBeanList) {
+    public ZhangDanAdapter(Activity context, ZhangDanBean.DataBeanX msgBeanList) {
         this.mContext = context;
-        this.datas.addAll(msgBeanList);
+        this.datas.add(msgBeanList);
     }
 
     public void setDatas(List<ZhangDanBean.DataBeanX> datas) {

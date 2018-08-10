@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.sakuraprint2.Adapter.KuaiDaDaYinAdapter;
@@ -27,10 +28,13 @@ import com.sakuraprint2.View.SakuraLinearLayoutManager;
 import com.sakuraprint2.View.WenguoyiRecycleView;
 import com.sakuraprint2.Volley.VolleyInterface;
 import com.sakuraprint2.Volley.VolleyRequest;
+
 import java.util.HashMap;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+
 import static com.sakuraprint2.App.context;
 import static com.sakuraprint2.R.string.Abnormalserver;
 
@@ -41,7 +45,7 @@ import static com.sakuraprint2.R.string.Abnormalserver;
  * @date 2018/7/21
  * 功能描述：
  */
-public class KuaiDaFragment extends Fragment {
+public class KuaiDaFragment extends Fragment implements View.OnClickListener {
 
     @BindView(R.id.cb_checkalltingya)
     CheckBox cbCheckalltingya;
@@ -88,11 +92,37 @@ public class KuaiDaFragment extends Fragment {
     @BindView(R.id.kexia)
     TextView kexia;
     Unbinder unbinder;
+    @BindView(R.id.btn5)
+    Button btn5;
+    @BindView(R.id.btn4)
+    Button btn4;
+    @BindView(R.id.btn3)
+    Button btn3;
+    @BindView(R.id.btn2)
+    Button btn2;
+    @BindView(R.id.btn1)
+    Button btn1;
+    @BindView(R.id.btn6)
+    Button btn6;
+    @BindView(R.id.btn7)
+    Button btn7;
+    @BindView(R.id.btn8)
+    Button btn8;
+    @BindView(R.id.btn9)
+    Button btn9;
+    @BindView(R.id.btn0)
+    Button btn0;
+    @BindView(R.id.btnx)
+    Button btnx;
+    @BindView(R.id.btn_submit)
+    Button btnSubmit;
 
     private SakuraLinearLayoutManager line1;
     private SakuraLinearLayoutManager line2;
     private SakuraLinearLayoutManager line3;
 
+    private boolean ishaoma = false;
+    private boolean ismoney = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -114,6 +144,39 @@ public class KuaiDaFragment extends Fragment {
         line3.setOrientation(LinearLayoutManager.VERTICAL);
         rvXiazhu.setLayoutManager(line3);
         rvXiazhu.setItemAnimator(new DefaultItemAnimator());
+
+        etHaoma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ishaoma = true;
+                ismoney = false;
+                etHaoma.setText("");
+                btnx.setText("x");
+            }
+        });
+
+        etMoney.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ismoney = true;
+                ishaoma = false;
+                etMoney.setText("");
+                btnx.setText(".");
+            }
+        });
+
+        btn0.setOnClickListener(this);
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+        btn5.setOnClickListener(this);
+        btn6.setOnClickListener(this);
+        btn7.setOnClickListener(this);
+        btn8.setOnClickListener(this);
+        btn9.setOnClickListener(this);
+        btnx.setOnClickListener(this);
+        btnSubmit.setOnClickListener(this);
 
         return view;
     }
@@ -137,7 +200,6 @@ public class KuaiDaFragment extends Fragment {
             public void onMySuccess(String result) {
                 Log.e("kuaidaData", result);
                 try {
-
                     KuaiDaBean kuaiDaBean = new Gson().fromJson(result, KuaiDaBean.class);
 
                     if (kuaiDaBean.isCode1()) {
@@ -174,5 +236,106 @@ public class KuaiDaFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         unbinder.unbind();
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if (ishaoma) {
+            if (etHaoma.getText().toString().length() >= 4) {
+                ishaoma = false;
+                ismoney = true;
+            }
+        }
+
+        switch (view.getId()) {
+
+            case R.id.btn0:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "0");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "0");
+                }
+                break;
+            case R.id.btn1:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "1");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "1");
+                }
+                break;
+            case R.id.btn2:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "2");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "2");
+                }
+                break;
+            case R.id.btn3:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "3");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "3");
+                }
+                break;
+            case R.id.btn4:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "4");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "4");
+                }
+                break;
+            case R.id.btn5:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "5");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "5");
+                }
+                break;
+            case R.id.btn6:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "6");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "6");
+                }
+                break;
+            case R.id.btn7:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "7");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "7");
+                }
+                break;
+            case R.id.btn8:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "8");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "8");
+                }
+                break;
+            case R.id.btn9:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "9");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + "9");
+                }
+                break;
+            case R.id.btnx:
+                if (ishaoma) {
+                    etHaoma.setText(etHaoma.getText().toString() + "x");
+                } else if (ismoney) {
+                    etMoney.setText(etMoney.getText().toString() + ".");
+                }
+                break;
+            case R.id.btn_submit:
+
+
+
+                break;
+            default:
+                break;
+
+
+        }
     }
 }
