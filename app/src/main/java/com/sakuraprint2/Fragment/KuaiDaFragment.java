@@ -14,7 +14,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.VolleyError;
 import com.google.gson.Gson;
 import com.sakuraprint2.Adapter.KuaiDaDaYinAdapter;
@@ -28,16 +27,12 @@ import com.sakuraprint2.View.SakuraLinearLayoutManager;
 import com.sakuraprint2.View.WenguoyiRecycleView;
 import com.sakuraprint2.Volley.VolleyInterface;
 import com.sakuraprint2.Volley.VolleyRequest;
-
 import java.util.HashMap;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-
 import static com.sakuraprint2.App.context;
 import static com.sakuraprint2.R.string.Abnormalserver;
-
 
 /**
  * com.sakuraprint2
@@ -145,8 +140,6 @@ public class KuaiDaFragment extends Fragment {
 
                     KuaiDaBean kuaiDaBean = new Gson().fromJson(result, KuaiDaBean.class);
 
-
-
                     if (kuaiDaBean.isCode1()) {
                         KuaiDaTingYaAdapter kuaiDaTingYaAdapter = new KuaiDaTingYaAdapter(getActivity(), kuaiDaBean.getData1());
                         rvTingya.setAdapter(kuaiDaTingYaAdapter);
@@ -159,7 +152,7 @@ public class KuaiDaFragment extends Fragment {
 
                     if (kuaiDaBean.isCode3()) {
                         KuaiDaXiaZhuAdapter kuaiDaXiaZhuAdapter = new KuaiDaXiaZhuAdapter(getActivity(), kuaiDaBean.getData3());
-                        rvDayin.setAdapter(kuaiDaXiaZhuAdapter);
+                        rvXiazhu.setAdapter(kuaiDaXiaZhuAdapter);
                     }
 
                     result = null;

@@ -1,5 +1,10 @@
 package com.sakuraprint2.Bean;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,10 +16,7 @@ import java.util.List;
  */
 public class KuaiDaBean {
 
-
     /**
-     * code1 : true
-     * data1 : [{"id":"52","mingxi_2":"560X","money":"1.00"},{"id":"53","mingxi_2":"568X","money":"1.00"},{"id":"54","mingxi_2":"569X","money":"1.00"},{"id":"55","mingxi_2":"570X","money":"1.00"},{"id":"56","mingxi_2":"578X","money":"1.00"},{"id":"57","mingxi_2":"579X","money":"1.00"}]
      * qishu : 1
      * moneys1 : 41
      * data2 : [{"odds":"9800","mingxi_1":"4定","mingxi_2":"1234","mingxi_3":"定","addtime":"1533527689","did":"201808061154498377","money":1,"id":"11"},{"odds":"9800","mingxi_1":"4定","mingxi_2":"2345","mingxi_3":"定","addtime":"1533527692","did":"201808061154524138","money":1,"id":"12"},{"odds":"980","mingxi_1":"3定","mingxi_2":"150X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"13"},{"odds":"980","mingxi_1":"3定","mingxi_2":"158X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"14"},{"odds":"980","mingxi_1":"3定","mingxi_2":"159X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"15"},{"odds":"980","mingxi_1":"3定","mingxi_2":"160X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"16"},{"odds":"980","mingxi_1":"3定","mingxi_2":"168X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"17"},{"odds":"980","mingxi_1":"3定","mingxi_2":"169X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"18"},{"odds":"980","mingxi_1":"3定","mingxi_2":"170X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"19"},{"odds":"980","mingxi_1":"3定","mingxi_2":"178X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"20"},{"odds":"980","mingxi_1":"3定","mingxi_2":"179X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"21"},{"odds":"980","mingxi_1":"3定","mingxi_2":"250X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"22"},{"odds":"980","mingxi_1":"3定","mingxi_2":"258X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"23"},{"odds":"980","mingxi_1":"3定","mingxi_2":"259X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"24"},{"odds":"980","mingxi_1":"3定","mingxi_2":"260X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"25"},{"odds":"980","mingxi_1":"3定","mingxi_2":"268X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"26"},{"odds":"980","mingxi_1":"3定","mingxi_2":"269X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"27"},{"odds":"980","mingxi_1":"3定","mingxi_2":"270X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"28"},{"odds":"980","mingxi_1":"3定","mingxi_2":"278X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"29"},{"odds":"980","mingxi_1":"3定","mingxi_2":"279X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"30"},{"odds":"980","mingxi_1":"3定","mingxi_2":"350X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"31"},{"odds":"980","mingxi_1":"3定","mingxi_2":"358X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"32"},{"odds":"980","mingxi_1":"3定","mingxi_2":"359X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"33"},{"odds":"980","mingxi_1":"3定","mingxi_2":"360X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"34"},{"odds":"980","mingxi_1":"3定","mingxi_2":"368X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"35"},{"odds":"980","mingxi_1":"3定","mingxi_2":"369X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"36"},{"odds":"980","mingxi_1":"3定","mingxi_2":"370X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"37"},{"odds":"980","mingxi_1":"3定","mingxi_2":"378X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"38"},{"odds":"980","mingxi_1":"3定","mingxi_2":"379X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"39"},{"odds":"980","mingxi_1":"3定","mingxi_2":"450X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"40"},{"odds":"980","mingxi_1":"3定","mingxi_2":"458X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"41"},{"odds":"980","mingxi_1":"3定","mingxi_2":"459X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"42"},{"odds":"980","mingxi_1":"3定","mingxi_2":"460X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"43"},{"odds":"980","mingxi_1":"3定","mingxi_2":"468X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"44"},{"odds":"980","mingxi_1":"3定","mingxi_2":"469X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"45"},{"odds":"980","mingxi_1":"3定","mingxi_2":"470X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"46"},{"odds":"980","mingxi_1":"3定","mingxi_2":"478X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"47"},{"odds":"980","mingxi_1":"3定","mingxi_2":"479X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"48"},{"odds":"980","mingxi_1":"3定","mingxi_2":"550X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"49"},{"odds":"980","mingxi_1":"3定","mingxi_2":"558X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"50"},{"odds":"980","mingxi_1":"3定","mingxi_2":"559X","mingxi_3":"定","addtime":"1533538791","did":"201808061459518431","money":1,"id":"51"}]
@@ -23,13 +25,12 @@ public class KuaiDaBean {
      * money : 41
      * time : 2018-08-06 14:59
      * did : null
-     * moneys : 41
-     * moneys2 : 0
      * data3 : [{"mingxi_1":"3定","id":"42","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"459X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"43","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"460X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"44","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"468X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"45","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"469X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"46","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"470X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"47","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"478X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"48","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"479X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"49","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"550X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"50","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"558X","mingxi_3":"定","odds":"980","t_status":2},{"mingxi_1":"3定","id":"51","js":"0","money":"1.00","addtime":"1533538791","did":"201808061459518431","mingxi_2":"559X","mingxi_3":"定","odds":"980","t_status":2}]
      * code3 : true
+     * code1 : true
+     * data1 : [{"id":"52","mingxi_2":"560X","money":"1.00"},{"id":"53","mingxi_2":"568X","money":"1.00"},{"id":"54","mingxi_2":"569X","money":"1.00"},{"id":"55","mingxi_2":"570X","money":"1.00"},{"id":"56","mingxi_2":"578X","money":"1.00"},{"id":"57","mingxi_2":"579X","money":"1.00"}]
      */
 
-    private boolean code1;
     private String qishu;
     private int moneys1;
     private boolean code2;
@@ -37,19 +38,18 @@ public class KuaiDaBean {
     private int money;
     private String time;
     private Object did;
-    private int moneys;
-    private int moneys2;
     private boolean code3;
-    private List<Data1Bean> data1;
+    private boolean code1;
     private List<Data2Bean> data2;
     private List<Data3Bean> data3;
+    private List<Data1Bean> data1;
 
-    public boolean isCode1() {
-        return code1;
-    }
+    public static List<KuaiDaBean> arrayKuaiDaBeanFromData(String str) {
 
-    public void setCode1(boolean code1) {
-        this.code1 = code1;
+        Type listType = new TypeToken<ArrayList<KuaiDaBean>>() {
+        }.getType();
+
+        return new Gson().fromJson(str, listType);
     }
 
     public String getQishu() {
@@ -108,22 +108,6 @@ public class KuaiDaBean {
         this.did = did;
     }
 
-    public int getMoneys() {
-        return moneys;
-    }
-
-    public void setMoneys(int moneys) {
-        this.moneys = moneys;
-    }
-
-    public int getMoneys2() {
-        return moneys2;
-    }
-
-    public void setMoneys2(int moneys2) {
-        this.moneys2 = moneys2;
-    }
-
     public boolean isCode3() {
         return code3;
     }
@@ -132,12 +116,12 @@ public class KuaiDaBean {
         this.code3 = code3;
     }
 
-    public List<Data1Bean> getData1() {
-        return data1;
+    public boolean isCode1() {
+        return code1;
     }
 
-    public void setData1(List<Data1Bean> data1) {
-        this.data1 = data1;
+    public void setCode1(boolean code1) {
+        this.code1 = code1;
     }
 
     public List<Data2Bean> getData2() {
@@ -156,40 +140,12 @@ public class KuaiDaBean {
         this.data3 = data3;
     }
 
-    public static class Data1Bean {
-        /**
-         * id : 52
-         * mingxi_2 : 560X
-         * money : 1.00
-         */
+    public List<Data1Bean> getData1() {
+        return data1;
+    }
 
-        private String id;
-        private String mingxi_2;
-        private String money;
-
-        public String getId() {
-            return id;
-        }
-
-        public void setId(String id) {
-            this.id = id;
-        }
-
-        public String getMingxi_2() {
-            return mingxi_2;
-        }
-
-        public void setMingxi_2(String mingxi_2) {
-            this.mingxi_2 = mingxi_2;
-        }
-
-        public String getMoney() {
-            return money;
-        }
-
-        public void setMoney(String money) {
-            this.money = money;
-        }
+    public void setData1(List<Data1Bean> data1) {
+        this.data1 = data1;
     }
 
     public static class Data2Bean {
@@ -212,6 +168,14 @@ public class KuaiDaBean {
         private String did;
         private int money;
         private String id;
+
+        public static List<Data2Bean> arrayData2BeanFromData(String str) {
+
+            Type listType = new TypeToken<ArrayList<Data2Bean>>() {
+            }.getType();
+
+            return new Gson().fromJson(str, listType);
+        }
 
         public String getOdds() {
             return odds;
@@ -303,6 +267,14 @@ public class KuaiDaBean {
         private String odds;
         private int t_status;
 
+        public static List<Data3Bean> arrayData3BeanFromData(String str) {
+
+            Type listType = new TypeToken<ArrayList<Data3Bean>>() {
+            }.getType();
+
+            return new Gson().fromJson(str, listType);
+        }
+
         public String getMingxi_1() {
             return mingxi_1;
         }
@@ -381,6 +353,50 @@ public class KuaiDaBean {
 
         public void setT_status(int t_status) {
             this.t_status = t_status;
+        }
+    }
+
+    public static class Data1Bean {
+        /**
+         * id : 52
+         * mingxi_2 : 560X
+         * money : 1.00
+         */
+
+        private String id;
+        private String mingxi_2;
+        private String money;
+
+        public static List<Data1Bean> arrayData1BeanFromData(String str) {
+
+            Type listType = new TypeToken<ArrayList<Data1Bean>>() {
+            }.getType();
+
+            return new Gson().fromJson(str, listType);
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public String getMingxi_2() {
+            return mingxi_2;
+        }
+
+        public void setMingxi_2(String mingxi_2) {
+            this.mingxi_2 = mingxi_2;
+        }
+
+        public String getMoney() {
+            return money;
+        }
+
+        public void setMoney(String money) {
+            this.money = money;
         }
     }
 }
