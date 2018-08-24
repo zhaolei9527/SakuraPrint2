@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +21,11 @@ import com.google.gson.Gson;
 import com.sakuraprint2.Adapter.KuaiDaDaYinAdapter;
 import com.sakuraprint2.Adapter.KuaiDaTingYaAdapter;
 import com.sakuraprint2.Adapter.KuaiDaXiaZhuAdapter;
+import com.sakuraprint2.Bean.AjaxOddBean;
 import com.sakuraprint2.Bean.KuaiDaBean;
+import com.sakuraprint2.Bean.XiaZhuBean;
 import com.sakuraprint2.R;
+import com.sakuraprint2.Utils.EasyToast;
 import com.sakuraprint2.Utils.SpUtil;
 import com.sakuraprint2.Utils.UrlUtils;
 import com.sakuraprint2.View.SakuraLinearLayoutManager;
@@ -121,7 +125,7 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
     private SakuraLinearLayoutManager line2;
     private SakuraLinearLayoutManager line3;
 
-    private boolean ishaoma = false;
+    private boolean ishaoma = true;
     private boolean ismoney = false;
 
     @Override
@@ -178,6 +182,24 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
         btnx.setOnClickListener(this);
         btnSubmit.setOnClickListener(this);
 
+        cbSizixian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (cbQuanzhuan.isChecked()) {
+                    cbQuanzhuan.setChecked(false);
+                }
+            }
+        });
+
+        cbQuanzhuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (cbSizixian.isChecked()) {
+                    cbSizixian.setChecked(false);
+                }
+            }
+        });
+
         return view;
     }
 
@@ -200,6 +222,7 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
             public void onMySuccess(String result) {
                 Log.e("kuaidaData", result);
                 try {
+
                     KuaiDaBean kuaiDaBean = new Gson().fromJson(result, KuaiDaBean.class);
 
                     if (kuaiDaBean.isCode1()) {
@@ -243,8 +266,10 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
 
         if (ishaoma) {
             if (etHaoma.getText().toString().length() >= 4) {
+                ajaxOdd();
                 ishaoma = false;
                 ismoney = true;
+                btnx.setText(".");
             }
         }
 
@@ -328,9 +353,15 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.btn_submit:
-
-
-
+                if (TextUtils.isEmpty(etHaoma.getText().toString())) {
+                    EasyToast.showShort(context, "请输入下注号码");
+                    return;
+                }
+                if (TextUtils.isEmpty(etMoney.getText().toString())) {
+                    EasyToast.showShort(context, "请输入下注金额");
+                    return;
+                }
+                xiazhu();
                 break;
             default:
                 break;
@@ -338,4 +369,95 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
 
         }
     }
+
+    /**
+     * 下注
+     */
+    public void xiazhu() {
+        HashMap<String, String> params = new HashMap<>(2);
+        params.put("moneys", etMoney.getText().toString());
+        params.put("number", etHaoma.getText().toString());
+        params.put("qishu", String.valueOf(SpUtil.get(context, "qishu", "")));
+        params.put("appUid", String.valueOf(SpUtil.get(context, "userid", "")));
+        params.put("uname", String.valueOf(SpUtil.get(context, "username", "")));
+        if (cbSizixian.isChecked()) {
+            params.put("types", "1");
+        }
+        if (cbQuanzhuan.isChecked()) {
+            params.put("types", "2");
+        }
+        VolleyRequest.RequestPost(context, UrlUtils.URL + "xiazhu", "xiazhu", params, new VolleyInterface(context) {
+            @Override
+            public void onMySuccess(String result) {
+                Log.e("RegisterActivity", result);
+                try {
+                    XiaZhuBean xiaZhuBean = new Gson().fromJson(result, XiaZhuBean.class);
+                    if (xiaZhuBean.isCode()) {
+                        etMoney.setText("");
+                        etHaoma.setText("");
+                    }
+                    EasyToast.showShort(context, xiaZhuBean.getTitles()
+                    );
+                    result = null;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context, Abnormalserver, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onMyError(VolleyError error) {
+                error.printStackTrace();
+                Toast.makeText(context, Abnormalserver, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
+    /**
+     * 登录
+     */
+    public void ajaxOdd() {
+        HashMap<String, String> params = new HashMap<>(2);
+        params.put("number", etHaoma.getText().toString());
+        params.put("qishu", String.valueOf(SpUtil.get(context, "qishu", "")));
+        params.put("appUid", String.valueOf(SpUtil.get(context, "userid", "")));
+        params.put("uname", String.valueOf(SpUtil.get(context, "username", "")));
+        if (cbSizixian.isChecked()) {
+            params.put("types", "1");
+        }
+        if (cbQuanzhuan.isChecked()) {
+            params.put("types", "2");
+        }
+        VolleyRequest.RequestPost(context, UrlUtils.URL + "ajax_odd", "ajax_odd", params, new VolleyInterface(context) {
+            @Override
+            public void onMySuccess(String result) {
+                Log.e("RegisterActivity", result);
+                try {
+                    AjaxOddBean ajaxOddBean = new Gson().fromJson(result, AjaxOddBean.class);
+                    if (ajaxOddBean.isCode()) {
+                        peilv.setText(ajaxOddBean.getData().get(0));
+                        kexia.setText(ajaxOddBean.getData().get(1));
+                    } else {
+                        EasyToast.showShort(context, "请输入有效号码");
+                        etHaoma.setText("");
+                        etMoney.setText("");
+                    }
+                    ajaxOddBean = null;
+                    result = null;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context, Abnormalserver, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onMyError(VolleyError error) {
+                error.printStackTrace();
+                Toast.makeText(context, Abnormalserver, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+
 }
