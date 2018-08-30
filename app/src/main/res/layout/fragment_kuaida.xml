@@ -359,6 +359,7 @@
                         android:textColor="@color/text000" />
 
                     <Button
+                        android:id="@+id/btn_tuima"
                         android:layout_width="@dimen/x60"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

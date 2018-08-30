@@ -64,6 +64,19 @@ public class KuaiDaXiaZhuAdapter extends RecyclerView.Adapter<KuaiDaXiaZhuAdapte
         holder.tvNum.setText(datas.get(position).getMingxi_2());
         holder.tvPeilv.setText(datas.get(position).getOdds());
 
+        if (datas.get(position).getT_status()==9){
+            holder.cbTui.setChecked(true);
+        }else {
+            holder.cbTui.setChecked(false);
+        }
+
+        holder.cbTui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datas.get(position).setT_status(9);
+            }
+        });
+
     }
 
     @Override

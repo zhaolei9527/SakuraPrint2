@@ -120,6 +120,8 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
     Button btnx;
     @BindView(R.id.btn_submit)
     Button btnSubmit;
+    @BindView(R.id.btn_tuima)
+    Button btnTuima;
 
     private SakuraLinearLayoutManager line1;
     private SakuraLinearLayoutManager line2;
@@ -127,6 +129,10 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
 
     private boolean ishaoma = true;
     private boolean ismoney = false;
+    private KuaiDaTingYaAdapter kuaiDaTingYaAdapter;
+    private KuaiDaDaYinAdapter kuaiDaDaYinAdapter;
+    private KuaiDaXiaZhuAdapter kuaiDaXiaZhuAdapter;
+    private StringBuffer stringBuffer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
@@ -181,6 +187,7 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
         btn9.setOnClickListener(this);
         btnx.setOnClickListener(this);
         btnSubmit.setOnClickListener(this);
+        btnTuima.setOnClickListener(this);
 
         cbSizixian.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -226,17 +233,17 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
                     KuaiDaBean kuaiDaBean = new Gson().fromJson(result, KuaiDaBean.class);
 
                     if (kuaiDaBean.isCode1()) {
-                        KuaiDaTingYaAdapter kuaiDaTingYaAdapter = new KuaiDaTingYaAdapter(getActivity(), kuaiDaBean.getData1());
+                        kuaiDaTingYaAdapter = new KuaiDaTingYaAdapter(getActivity(), kuaiDaBean.getData1());
                         rvTingya.setAdapter(kuaiDaTingYaAdapter);
                     }
 
                     if (kuaiDaBean.isCode2()) {
-                        KuaiDaDaYinAdapter kuaiDaDaYinAdapter = new KuaiDaDaYinAdapter(getActivity(), kuaiDaBean.getData2());
+                        kuaiDaDaYinAdapter = new KuaiDaDaYinAdapter(getActivity(), kuaiDaBean.getData2());
                         rvDayin.setAdapter(kuaiDaDaYinAdapter);
                     }
 
                     if (kuaiDaBean.isCode3()) {
-                        KuaiDaXiaZhuAdapter kuaiDaXiaZhuAdapter = new KuaiDaXiaZhuAdapter(getActivity(), kuaiDaBean.getData3());
+                        kuaiDaXiaZhuAdapter = new KuaiDaXiaZhuAdapter(getActivity(), kuaiDaBean.getData3());
                         rvXiazhu.setAdapter(kuaiDaXiaZhuAdapter);
                     }
 
@@ -353,22 +360,78 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
                 }
                 break;
             case R.id.btn_submit:
+
                 if (TextUtils.isEmpty(etHaoma.getText().toString())) {
                     EasyToast.showShort(context, "请输入下注号码");
                     return;
                 }
+
                 if (TextUtils.isEmpty(etMoney.getText().toString())) {
                     EasyToast.showShort(context, "请输入下注金额");
                     return;
                 }
+
+//                double v = Double.parseDouble(etMoney.getText().toString());
+//                if (v < 1) {
+//                    EasyToast.showShort(context, "下注金额不能小于1");
+//                    return;
+//                }
+
                 xiazhu();
+                break;
+            case R.id.btn_tuima:
+
+                for (int i = 0; i < kuaiDaXiaZhuAdapter.getDatas().size(); i++) {
+                    if (9 == kuaiDaXiaZhuAdapter.getDatas().get(i).getT_status()) {
+                        stringBuffer = new StringBuffer();
+                        if (stringBuffer.length() > 0) {
+                            stringBuffer.append(",");
+                            stringBuffer.append(kuaiDaXiaZhuAdapter.getDatas().get(i).getId());
+                        } else {
+                            stringBuffer.append(kuaiDaXiaZhuAdapter.getDatas().get(i).getId());
+                        }
+                    }
+                }
+
+                Log.e("KuaiDaFragment", stringBuffer.toString());
+
                 break;
             default:
                 break;
-
-
         }
     }
+
+    /**
+     * 退码
+     */
+    public void tuima(String tuimaid) {
+        HashMap<String, String> params = new HashMap<>(2);
+        params.put("qishu", String.valueOf(SpUtil.get(context, "qishu", "")));
+        params.put("appUid", String.valueOf(SpUtil.get(context, "userid", "")));
+        params.put("uname", String.valueOf(SpUtil.get(context, "username", "")));
+        params.put("tuimaid", tuimaid);
+        VolleyRequest.RequestPost(context, UrlUtils.URL + "tuima", "tuima", params, new VolleyInterface(context) {
+            @Override
+            public void onMySuccess(String result) {
+                Log.e("tuima", result);
+                try {
+
+
+                    result = null;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(context, Abnormalserver, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onMyError(VolleyError error) {
+                error.printStackTrace();
+                Toast.makeText(context, Abnormalserver, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
 
     /**
      * 下注
@@ -395,6 +458,7 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
                     if (xiaZhuBean.isCode()) {
                         etMoney.setText("");
                         etHaoma.setText("");
+                        kuaidaData();
                     }
                     EasyToast.showShort(context, xiaZhuBean.getTitles()
                     );
