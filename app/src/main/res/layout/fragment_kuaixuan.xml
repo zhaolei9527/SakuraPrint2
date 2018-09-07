@@ -39,11 +39,6 @@
                     android:gravity="center"
                     android:text="三字定" />
 
-                <View
-                    android:layout_width="@dimen/x1"
-                    android:layout_height="match_parent"
-                    android:background="@color/bgddd"></View>
-
                 <TextView
                     android:id="@+id/tv_siding"
                     android:layout_width="0dp"
@@ -51,6 +46,11 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="四字定" />
+
+                <View
+                    android:layout_width="@dimen/x1"
+                    android:layout_height="match_parent"
+                    android:background="@color/bgddd"></View>
 
             </LinearLayout>
 

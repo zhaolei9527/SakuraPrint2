@@ -1,0 +1,686 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns:dddd="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>手机会员</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="1 days" name="revisit-after" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <style type="text/css">
+        body, td{
+        margin: 0px;
+        font: 12px Arial, Helvetica, sans-serif;
+        text-align: left;
+
+        }
+        .font14{
+        font-size: 14px;font-weight: bold;
+        font-family:Verdana, Arial, Helvetica, sans-serif;
+        }
+        .smalltxt {
+        font: 12px Arial, Helvetica, sans-serif !important;
+        font: 11px Arial, Helvetica, sans-serif;
+        }
+
+        textarea, select {
+        margin: 5px 0px;
+        border: 1px solid #6699CC;
+        font: 13px Arial, Helvetica, sans-serif;
+        line-height: 1.3em;
+        color: #006699;
+        background: #FFFFFF;
+        }
+        form {
+        margin: 0px;
+        }
+        textarea {
+        overflow: auto;
+        }
+        .checkbox, .radio {
+        border: 0px;
+        background: none;
+        vertical-align: middle !important;
+        vertical-align: baseline;
+        margin-bottom: 5px !important;
+        margin-bottom: 0;
+        height: 16px;
+        }
+        .checkbox {
+        height: 28px;
+        width: 28px;
+        }
+        a {
+        text-decoration: none;
+        color: #555555
+        }
+        a:hover {
+        text-decoration: underline;
+        }
+        .meuntuima:link { color: #fff;font-weight: bold;}
+        .meuntuima:visited { color: #fff;font-weight: bold;}
+        .meuntuima:active {color:red;font-weight: bold;}
+        .meuntuima:hover { color: red;font-weight: bold;}
+
+
+
+        .sub td.altbg1 {
+        padding-left: 1.5em;
+        }
+        .category td {
+        color: #333333;
+        background-color: #F0F0F0;
+        }
+
+        td.altbg1, .altbg1 td {
+        background: #F1F5F8;
+        text-decoration: none;
+        }
+        td.altbg1 a,.altbg1 td a,td.altbg2 a, .altbg2 td a {
+        text-decoration: none;
+        color:#3333FF
+        }
+        td.altbg2, .altbg2 td {
+        background: #FFFFFF;
+        }
+
+
+        .soon_b,.members_b,.soonselect_b {
+
+        outline: 1px solid #640000;
+        border: 0px !important;
+        > border: 1px solid #640000 !important;
+        border: 1px solid #640000;
+        empty-cells: show;
+        border-collapse: separate !important;
+        > border-collapse: collapse !important;
+        border-collapse: collapse;
+        }
+        .soonselect_b td {
+        border-bottom: 1px solid #f6d3bc;
+        border-right: 1px solid #f6d3bc;
+        line-height: 1.5em;
+        height: 1em;
+        padding: 2px;
+        background: #FFFFFF;
+
+        }
+
+
+        .soon_b td {
+        border-bottom: 1px solid #f6d3bc;
+        border-right: 1px solid #f6d3bc;
+        text-align:center;
+        line-height: 1.5em;
+        height: 1em;
+        padding: 2px;
+        background: #FFFFFF;
+
+        }
+
+        .center td {
+        text-align:center;
+        }
+
+        td.center,.center.td {
+        text-align:center;
+        }
+
+        .soon_b td ul, .soon_b td ul li,.members_b td ul, .members_b td ul li,.soonselect_b td ul, .soonselect_b td ul li {
+        line-height: 22px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        }
+        .soonselect_b td dl{
+        color:#990033;
+        font-weight: bold;display: inline;
+        }
+        .soon_b td img {
+        margin-top: 8px;
+
+        }
+
+        .soon_head  td {
+        background: #EEEEEE;
+        }
+
+
+
+        /* ===========按钮式样============== */
+
+        .button {
+        font: 12px Arial, Helvetica, sans-serif;
+        padding: 0 6px;
+        color: #000;
+        background: #e3f5fd;
+        /*for Mozilla*/
+        outline: 1px solid #1590BE ;
+        border: 1px solid #FFFFFF !important;
+        height: 26px !important;
+        line-height: 22px !important;
+        /*for IE7*/
+        > border: 1px solid #1590BE !important;
+        > height: 26px !important;
+        > line-height: 20px !important;
+        /*for IE*/
+        border: 1px solid #1590BE ;
+        height: 26px;
+        line-height: 20px;
+        }
+        .number {
+        font: 28px Arial, Helvetica, sans-serif;
+        color: #000;
+        font-weight: bold;
+        width:80px;
+        }
+
+
+        .footer {
+        height: 20px;
+        margin: 20px;
+        text-align: center;
+        }
+        .number_count{
+
+        padding: 0px;
+        color: #000;
+        /*for Mozilla*/
+        height: 32px !important;
+        line-height: 33px !important;
+
+        /*for IE7*/
+        > height: 32px !important;
+        > line-height: 30px !important;
+
+        /*for IE*/
+        height: 31px;
+        line-height: 32px;
+        }
+        .number_w3{
+        width:60px;font: 14px Arial, Helvetica, sans-serif;
+        }
+        .number_w{
+        color: #000;
+        font: 14px Arial, Helvetica, sans-serif;
+        padding: 0px 2px;margin: 0px;
+        /*for Mozilla*/
+        height: 42px !important;
+        line-height: 20px !important;
+        /*for IE7*/
+        > height: 42px !important;
+        > line-height: 20px !important;
+        > padding: 0px!important;
+        /*for IE*/
+        height: 41px;
+        line-height: 19px;
+        }
+        td.top_1,.top_1.td {background: #ffffff;}
+        td.top_2,.top_2.td {background: #ff9900;}
+        .soonselect_w {
+        font: 14px Arial, Helvetica, sans-serif;color: #000;
+
+        }
+        .soonselect_w20{width:20px;}
+        .soonselect_w35{width:30px;}
+        .soonselect_w55{width:55px;}
+        .soonselect_w25{width:30px;}
+        .soonselect_w74{width:86px;}
+        .soonselect_w100{width:120px;}
+
+
+
+		#mainkey td{ 
+		background-color:#54206c;
+		color:#d4acf4;
+		text-align:center;  
+		width:16.6%; 
+		line-height:40px;height:40px;cursor:pointer;font-weight: bold; font-size:20px;
+		}
+
+
+
+    </style>
+    <SCRIPT LANGUAGE="JavaScript">
+    <!--
+    function $(id) {
+		return document.getElementById(id);
+    }
+	//select.js 直接复制
+    //-->
+    </SCRIPT>
+    <script src="./select.js" type="text/javascript"></script>
+    <script src="./cg.select.import.js" type="text/javascript"></script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+    var _soonset = {};
+
+    function loging(){
+        var numbernum=$("selectnumber").value;
+        if(numbernum!=''){
+            if(window.confirm('\n上次生成数据还没有下注完成，确定要重新生成吗?\n\n')){__ss.__create();GetSoonSelectData();return false;}else{ return;}
+        }else{
+            __ss.__create();
+            GetSoonSelectData();
+        }
+    }
+    function __reset (){
+        $("selectnumber").value='';
+        $("selectnumbertotal").innerHTML=0;
+        $("selectnumbertotal_hidden").value=0;
+        //XMLHttp.sendReq("GET","wap_ajax.php?action=selectreset&amp;sid=AaJfs6&amp;inajax=1","",post_selectMsg,"showorderhtml");
+    }
+    __ss.IN_WAPCG=2;
+	var szd=2;
+	//app推送过来内容
+    function getSetSoonInfo(setsoon){
+		
+		//setsoon = AndroidFunction.getSetSoonInfo();
+		//alert(setsoon+"===");
+		var obj={};
+		if(setsoon!=''){
+			var obj=eval("("+setsoon+")"); //把字符串转换成对象
+			var props = "";  
+			for(var p in obj){  
+				if(p=="setsoon"){  
+					_soonset = obj[p];
+				}else{
+				  if(obj.sidingwei==1){
+					  document.getElementById("soonclass3").style.display="";//四字定 隐藏 后台设置
+					  szd=1;
+				  }else{
+					  document.getElementById("soonclass3").style.display="none";
+				  }
+				  props+= p + "=" + obj[p] + " \n";  
+				}  
+			}
+            if(obj.logsszd>0){
+                szd=obj.logsszd;
+            }
+			__ss.__showmeun(szd);
+			 setTimeout("getclassid("+szd+")",200);
+			 $("zjzc").value=0;
+            if(obj.logsszd>0){
+                document.datamembers.reset();
+                $("zjzc").value=1;
+                cgSelectImport.parsing(obj.logsszd,obj.logsstr);
+            }else{
+                document.getElementById('setsoonclass2').click();
+            }
+
+		}else{
+		    document.getElementById('setsoonclass2').click();
+		}
+
+	
+    }
+
+	//把号码传给app
+    function GetSoonSelectData()
+    {
+        var strnumber = document.getElementById('selectnumber').value;
+        var selectlogs = document.getElementById('selectlogs').value;
+        var selectlogsclassid = document.getElementById('selectlogsclassid').value;
+        var zjzc = document.getElementById('zjzc').value;
+        AndroidFunction.getWebNumber(strnumber,selectlogs,selectlogsclassid,zjzc);
+		document.getElementById('selectnumber').value="";
+        document.getElementById('selectlogs').value="";
+        document.getElementById('zjzc').value="0";
+    }
+	
+
+//-->
+</SCRIPT>
+
+</head>
+<body style="margin: 5px 0px 5px 0px" >
+<div id="showkey" style="width:100%;height:84px;display:none;position:absolute; "></div>
+<table id="tablemain" width="100%"  border="0" cellpadding="0" cellspacing="0" style='background: #fff;' align=center >
+    <tr>
+        <td style="padding:0px" valign=top>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="soonselect_b" class="soonselect_b" >
+                <form method="POST" name="datamembers" id="datamembers" target="soonsend_ifr"  style="padding:0;margin:0">
+                    <tr class="center"><td colspan="4">
+                        <table border="0"  width="100%" cellpadding="0" cellspacing="0"  >
+                            <tr style="border:0px">
+                                <td width="33%" id="top_1"><button onclick="getclassid(1);__ss.__showmeun(1);return false;" TYPE="button" id="soonclass1" name="soonclass1">二字定</button></td>
+                                <td width="33%" id="top_2"><button onclick="getclassid(2);__ss.__showmeun(2);return false;" TYPE="button" id="soonclass2" name="soonclass1">三字定</button></td>
+                                <td width="34%" id="top_3"><button onclick="getclassid(3);__ss.__showmeun(3);return false;" TYPE="button" id="soonclass3" name="soonclass1">四字定</span>&nbsp;</td>
+
+                            </tr>
+                            <tr>
+                                <td id="top_4"><button onclick="getclassid(4);__ss.__showmeun(4);return false;" TYPE="button" id="soonclass4" name="soonclass1">二字现</button></td>
+                                <td id="top_5"><button onclick="getclassid(5);__ss.__showmeun(5);return false;" TYPE="button" id="soonclass5" name="soonclass1">三字现</button></td>
+                                <td id="top_6"><button onclick="getclassid(6);__ss.__showmeun(6);return false;" TYPE="button" id="soonclass6" name="soonclass1">四字现</button></td>
+                            <tr></table>
+                    </td></tr>
+                    <tr id="s1" class="soon_head center">
+                        <td  colspan="2"><dl>定位置</dl><INPUT TYPE="checkbox" NAME="__dingwei_chu" id="__dingwei_chu" onclick="__ss.__showdis(this,'__dingwei_qu');">除<INPUT TYPE="checkbox" NAME="__dingwei_qu" id="__dingwei_qu" onclick="__ss.__showdis(this,'__dingwei_chu');" checked>取</td>
+                        <td  colspan="2"><dl>配数全转</dl><INPUT TYPE="checkbox" NAME="__peishu_chu" id="__peishu_chu" onclick="__ss.__showdis(this,'__peishu_qu');">除<INPUT TYPE="checkbox" NAME="__peishu_qu" id="__peishu_qu" onclick="__ss.__showdis(this,'__peishu_chu');">取
+                        </td>
+                    </tr>
+                    <tr id="s13" class="soon_head center">
+                        <td  colspan="4"><dl>配数</dl><INPUT TYPE="checkbox" NAME="__peishu_chu2" id="__peishu_chu2" onclick="__ss.__showdis(this,'__peishu_qu2');">除<INPUT TYPE="checkbox" NAME="__peishu_qu2" id="__peishu_qu2" onclick="__ss.__showdis(this,'__peishu_chu2');" checked>取
+                        </td>
+                    </tr>
+                    <tr id="s12" class="center" >
+                        <td colspan="4">
+                            <span id="ps1"><INPUT TYPE="text" NAME="__peishu_1" ID="__peishu_1" class="soonselect_w soonselect_w74"  maxlength=10  ></span>
+                            <span id="ps2"> 配,<INPUT TYPE="text" NAME="__peishu_2" ID="__peishu_2" class="soonselect_w soonselect_w74"  maxlength=10  ></span><br>
+                            <span id="ps3"> 配,<INPUT TYPE="text" NAME="__peishu_3" ID="__peishu_3" class="soonselect_w soonselect_w74"  maxlength=10  ></span>
+                            <span id="ps4"> 配,<INPUT TYPE="text" NAME="__peishu_4" ID="__peishu_4" class="soonselect_w soonselect_w74"  maxlength=10  ></span>
+                        </td>
+                    </tr>
+
+                    <tr id="s3" class="center" >
+                        <td colspan="4">
+                            仟<INPUT TYPE="text" NAME="__dingwei_1" ID="__dingwei_1" class="soonselect_w soonselect_w74"  maxlength=10 onkeyup="limitrepeat(this)">
+                            佰<INPUT TYPE="text" NAME="__dingwei_2" ID="__dingwei_2" class="soonselect_w soonselect_w74"  maxlength=10 onkeyup="limitrepeat(this)"><br>
+                            拾<INPUT TYPE="text" NAME="__dingwei_3" ID="__dingwei_3" class="soonselect_w soonselect_w74"  maxlength=10 onkeyup="limitrepeat(this)">
+                            个<INPUT TYPE="text" NAME="__dingwei_4" ID="__dingwei_4" class="soonselect_w soonselect_w74"  maxlength=10 onkeyup="limitrepeat(this)">
+                            <span id="s2" style="display:none;"></span>
+                        </td>
+                    </tr>
+                    <tr id="s4" class="soon_head center"><td colspan="4"><dl>合　分</dl><INPUT TYPE="checkbox" NAME="__hefen_chu" id="__hefen_chu" onclick="__ss.__showdis(this,'__hefen_qu');">除<INPUT TYPE="checkbox" NAME="__hefen_qu" id="__hefen_qu" onclick="__ss.__showdis(this,'__hefen_chu');" checked>取</td></tr>
+                    <tr id="s5" class="center" ><td colspan="4">
+                        1.
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_11" name="__hefenzhide_w_11">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_21" name="__hefenzhide_w_21" >
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_31" name="__hefenzhide_w_31">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_41" name="__hefenzhide_w_41">
+                        <INPUT TYPE="text" NAME="__hefenzhide_1" class="soonselect_w soonselect_w74" ID="__hefenzhide_1"  maxlength=10  onkeyup="limitrepeat(this)">
+                        <br>
+
+                        2.
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_12" name="__hefenzhide_w_12">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_22" name="__hefenzhide_w_22" >
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_32" name="__hefenzhide_w_32">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_42" name="__hefenzhide_w_42">
+                        <INPUT TYPE="text" NAME="__hefenzhide_2" class="soonselect_w soonselect_w74" ID="__hefenzhide_2"  maxlength=10  onkeyup="limitrepeat(this)">
+                        <br>
+
+                        3.
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_13" name="__hefenzhide_w_13">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_23" name="__hefenzhide_w_23" >
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_33" name="__hefenzhide_w_33">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_43" name="__hefenzhide_w_43">
+                        <INPUT TYPE="text" NAME="__hefenzhide_3" class="soonselect_w soonselect_w74" ID="__hefenzhide_3"  maxlength=10  onkeyup="limitrepeat(this)">
+                        <br>
+
+                        4.
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_14" name="__hefenzhide_w_14">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_24" name="__hefenzhide_w_24" >
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_34" name="__hefenzhide_w_34">
+                        <INPUT TYPE="checkbox" id="__hefenzhide_w_44" name="__hefenzhide_w_44">
+                        <INPUT TYPE="text" NAME="__hefenzhide_4" class="soonselect_w soonselect_w74" ID="__hefenzhide_4"  maxlength=10  onkeyup="limitrepeat(this)">
+                        <br>
+                    </td></tr>
+                    <tr id="s6">
+                        <td colspan="4" ><span id="bdwhefen1">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" style="border: 0px;" >
+            <tr><td  style="border: 0px;">
+                <dl>不定位合分</dl>
+                <span id="bd1"><INPUT TYPE="checkbox" id="__bdwhefen_1" name="__bdwhefen_1" onclick="__ss.__showdis(this,'__bdwhefen_2');">两数合</span>
+                <span id="bd2"><INPUT TYPE="checkbox" id="__bdwhefen_2" name="__bdwhefen_2" onclick="__ss.__showdis(this,'__bdwhefen_1');">三数合</span>
+            </td><td width="*" style="border: 0px;">
+                <INPUT TYPE="text" NAME="__bdwhefen" ID="__bdwhefen" class="soonselect_w soonselect_w20" style="width:70px" maxlength=8  onkeyup="limitrepeat(this)" >
+
+            </td></tr></table></span>
+                        </td>
+                    </tr>
+                    <tr id="zfw1">
+                        <td colspan="4">
+                            <dl>值 范 围</dl>&nbsp;&nbsp;从<INPUT TYPE="text" NAME="__zhifanwei_start" ID="__zhifanwei_start" onkeyup="__ss.__keyup_zhifanwei();" class="soonselect_w soonselect_w35" maxlength=8  >值&nbsp;至&nbsp;&nbsp;<INPUT TYPE="text" NAME="__zhifanwei_end" ID="__zhifanwei_end" onkeyup="__ss.__keyup_zhifanwei();" class="soonselect_w soonselect_w35" maxlength=8  >值
+                        </td>
+                    </tr>
+
+
+
+
+                    <tr id="s7">
+                        <td  colspan="4">
+                            <span  id="quandao"><dl>全转</dl>&nbsp;<INPUT onKeypress="JHshNumberText();" TYPE="text" NAME="__quandao" ID="__quandao"  class="soonselect_w soonselect_w55" maxlength=9  ></span>
+                            <span  id="shangjiang"><dl>上奖</dl>&nbsp;<INPUT onKeypress="JHshNumberText();" TYPE="text" NAME="__shangjiang" ID="__shangjiang"  class="soonselect_w soonselect_w55" maxlength=9   ></span>
+                            <span  id="paichu">&nbsp;<dl>排除</dl>&nbsp;<INPUT TYPE="text" NAME="__paichu" ID="__paichu" class="soonselect_w soonselect_w55"  maxlength=9   onkeyup="limitrepeat(this)"></span><span  id="changyong"><INPUT TYPE="checkbox" NAME="__changyong" id="__changyong" style="display:none"></span>
+                        </td>
+                    </tr>
+                    <tr id="s14">
+                        <td  colspan="4">
+                            &nbsp;<span id="ch1"><dl>乘号位置</dl></span>
+	<span  id="ch2"><INPUT TYPE="checkbox" NAME="__chenghao_1" id="__chenghao_1">
+	<INPUT TYPE="checkbox" NAME="__chenghao_2" id="__chenghao_2">
+	<INPUT TYPE="checkbox" NAME="__chenghao_3" id="__chenghao_3">
+	<INPUT TYPE="checkbox" NAME="__chenghao_4" id="__chenghao_4"></span>
+	<span id="psgdstr"><dl>固定位置</dl><INPUT TYPE="checkbox" NAME="__gd1" id="__gd1">
+	<INPUT TYPE="checkbox" NAME="__gd2" id="__gd2">
+	<INPUT TYPE="checkbox" NAME="__gd3" id="__gd3">
+	<INPUT TYPE="checkbox" NAME="__gd4" id="__gd4"></span>
+
+                        </td>
+                    </tr>
+
+
+                    <tr id="han1" >
+                        <td colspan="4"><INPUT TYPE="checkbox" NAME="__chu_1" ID="__chu_1" onclick="__ss.__showdis(this,'__qu_1');">除<INPUT TYPE="checkbox" NAME="__qu_1" ID="__qu_1" onclick="__ss.__showdis(this,'__chu_1');">取&nbsp;<dl>含</dl>&nbsp;<INPUT TYPE="text" NAME="__han_1" ID="__han_1" class="soonselect_w soonselect_w74" maxlength=10  >&nbsp;<dl>复式</dl><INPUT TYPE="text" NAME="__fushi_1" ID="__fushi_1" class="soonselect_w soonselect_w74" maxlength=10  onkeyup="limitrepeat(this)" ></td>
+                    </tr>
+                    <tr id="han2">
+                        <td colspan="4"><INPUT TYPE="checkbox" NAME="__chu_2" ID="__chu_2" onclick="__ss.__showdis(this,'__qu_2');">除<INPUT TYPE="checkbox" NAME="__qu_2" ID="__qu_2" onclick="__ss.__showdis(this,'__chu_2');">取&nbsp;<dl>含</dl>&nbsp;<INPUT TYPE="text" NAME="__han_2" ID="__han_2" class="soonselect_w soonselect_w74" maxlength=10  >&nbsp;<dl>复式</dl><INPUT TYPE="text" NAME="__fushi_2" ID="__fushi_2" class="soonselect_w soonselect_w74" maxlength=10  onkeyup="limitrepeat(this)" ></td>
+                    </tr>
+                    <tr id="han3">
+                        <td colspan="4"><INPUT TYPE="checkbox" NAME="__chu_3" ID="__chu_3" onclick="__ss.__showdis(this,'__qu_3');">除<INPUT TYPE="checkbox" NAME="__qu_3" ID="__qu_3" onclick="__ss.__showdis(this,'__chu_3');">取&nbsp;<dl>含</dl>&nbsp;<INPUT TYPE="text" NAME="__han_3" ID="__han_3" class="soonselect_w soonselect_w74" maxlength=10  >&nbsp;<dl>复式</dl><INPUT TYPE="text" NAME="__fushi_3" ID="__fushi_3" class="soonselect_w soonselect_w74" maxlength=10  onkeyup="limitrepeat(this)" ></td>
+                    </tr>
+                    <tr id="han4">
+                        <td colspan="4"><INPUT TYPE="checkbox" NAME="__chu_4" ID="__chu_4" onclick="__ss.__showdis(this,'__qu_4');">除<INPUT TYPE="checkbox" NAME="__qu_4" ID="__qu_4" onclick="__ss.__showdis(this,'__chu_4');">取&nbsp;<dl>含</dl>&nbsp;<INPUT TYPE="text" NAME="__han_4" ID="__han_4" class="soonselect_w soonselect_w74" maxlength=10  >&nbsp;<dl>复式</dl><INPUT TYPE="text" NAME="__fushi_4" ID="__fushi_4" class="soonselect_w soonselect_w74" maxlength=10  onkeyup="limitrepeat(this)" ></td>
+                    </tr>
+                    <tr id="han5">
+                        <td colspan="4"><INPUT TYPE="checkbox" NAME="__chu_5" ID="__chu_5" onclick="__ss.__showdis(this,'__qu_5');">除<INPUT TYPE="checkbox" NAME="__qu_5" ID="__qu_5" onclick="__ss.__showdis(this,'__chu_5');">取&nbsp;<dl>含</dl>&nbsp;<INPUT TYPE="text" NAME="__han_5" ID="__han_5" class="soonselect_w soonselect_w74" maxlength=10  >&nbsp;<dl>复式</dl><INPUT TYPE="text" NAME="__fushi_5" ID="__fushi_5" class="soonselect_w soonselect_w74" maxlength=10  onkeyup="limitrepeat(this)" ></td>
+                    </tr>
+                    <tr id="han6">
+                        <td colspan="4"><INPUT TYPE="checkbox" NAME="__chu_6" ID="__chu_6" onclick="__ss.__showdis(this,'__qu_6');">除<INPUT TYPE="checkbox" NAME="__qu_6" ID="__qu_6" onclick="__ss.__showdis(this,'__chu_6');">取&nbsp;<dl>含</dl>&nbsp;<INPUT TYPE="text" NAME="__han_6" ID="__han_6" class="soonselect_w soonselect_w74" maxlength=10  >&nbsp;<dl>复式</dl><INPUT TYPE="text" NAME="__fushi_6" ID="__fushi_6" class="soonselect_w soonselect_w74" maxlength=10  onkeyup="limitrepeat(this)" ></td>
+                    </tr>
+
+
+                    <tr id="s8">
+                        <td colspan="4">
+                            <span id="ss1">    <INPUT TYPE="checkbox" NAME="__chu_chong_1" ID="__chu_chong_1" onclick="__ss.__showdis(this,'__qu_chong_1');">除<INPUT TYPE="checkbox" NAME="__qu_chong_1" ID="__qu_chong_1" onclick="__ss.__showdis(this,'__chu_chong_1');">取(<dl>双重</dl>)&nbsp;</span>
+
+                            <span id="ss2"><INPUT TYPE="checkbox" NAME="__chu_chong_2" ID="__chu_chong_2" onclick="__ss.__showdis(this,'__qu_chong_2');">除<INPUT TYPE="checkbox" NAME="__qu_chong_2" ID="__qu_chong_2" onclick="__ss.__showdis(this,'__chu_chong_2');">取(<dl>双双重</dl>)&nbsp;</span>
+                            <span id="ss3">    <span id="sss1"><br></span><INPUT TYPE="checkbox" NAME="__chu_chong_3" ID="__chu_chong_3" onclick="__ss.__showdis(this,'__qu_chong_3');">除<INPUT TYPE="checkbox" NAME="__qu_chong_3" ID="__qu_chong_3" onclick="__ss.__showdis(this,'__chu_chong_3');">取(<dl>三重</dl>)&nbsp;</span>
+                            <span id="ss4"><INPUT TYPE="checkbox" NAME="__chu_chong_4" ID="__chu_chong_4" onclick="__ss.__showdis(this,'__qu_chong_4');">除<INPUT TYPE="checkbox" NAME="__qu_chong_4" ID="__qu_chong_4" onclick="__ss.__showdis(this,'__chu_chong_4');">取(<dl>四重</dl>)</span>
+                        </td>
+                    </tr>
+                    <tr id="s9">
+                        <td colspan="4">
+                            <span id="ss5">    <INPUT TYPE="checkbox" NAME="__chu_xiongdi_1" ID="__chu_xiongdi_1" onclick="__ss.__showdis(this,'__qu_xiongdi_1');">除<INPUT TYPE="checkbox" NAME="__qu_xiongdi_1" ID="__qu_xiongdi_1" onclick="__ss.__showdis(this,'__chu_xiongdi_1');">取(<dl>二兄弟</dl>)&nbsp;</span>
+                            <span id="ss6"><INPUT TYPE="checkbox" NAME="__chu_xiongdi_2" ID="__chu_xiongdi_2" onclick="__ss.__showdis(this,'__qu_xiongdi_2');">除<INPUT TYPE="checkbox" NAME="__qu_xiongdi_2" ID="__qu_xiongdi_2" onclick="__ss.__showdis(this,'__chu_xiongdi_2');">取(<dl>三兄弟</dl>)&nbsp;</span>
+                            <span id="ss7">    <INPUT TYPE="checkbox" NAME="__chu_xiongdi_3" ID="__chu_xiongdi_3" onclick="__ss.__showdis(this,'__qu_xiongdi_3');">除<INPUT TYPE="checkbox" NAME="__qu_xiongdi_3" ID="__qu_xiongdi_3" onclick="__ss.__showdis(this,'__chu_xiongdi_3');">取(<dl>四兄弟</dl>)</span>
+
+                        </td>
+                    </tr>
+                    <tr id="s10">
+                        <td colspan="4">
+                            <span id="ss8">    <INPUT TYPE="checkbox" NAME="__chu_duishu" ID="__chu_duishu" onclick="__ss.__showdis(this,'__qu_duishu');">除<INPUT TYPE="checkbox" NAME="__qu_duishu" ID="__qu_duishu" onclick="__ss.__showdis(this,'__chu_duishu');">取(<dl>对数</dl>)</span>&nbsp;
+                            <INPUT TYPE="text" NAME="__duishu_1" ID="__duishu_1" class="soonselect_w soonselect_w55"  maxlength=2  onkeyup="limitrepeat(this)" >&nbsp;
+                            <INPUT TYPE="text" NAME="__duishu_2" ID="__duishu_2" class="soonselect_w soonselect_w55"  maxlength=2  onkeyup="limitrepeat(this)" >&nbsp;
+                            <INPUT TYPE="text" NAME="__duishu_3" ID="__duishu_3" class="soonselect_w soonselect_w55"  maxlength=2  onkeyup="limitrepeat(this)" >&nbsp;
+
+                        </td>
+                    </tr>
+                    <tr id="s11">
+                        <td colspan="4">
+		<span id="dan1">
+		<span id="ss9">    <INPUT TYPE="checkbox" NAME="__dan_chu" ID="__dan_chu" onclick="__ss.__showdis(this,'__dan_qu');">除<INPUT TYPE="checkbox" NAME="__dan_qu" ID="__dan_qu" onclick="__ss.__showdis(this,'__dan_chu');">取(<dl>单</dl>)</span>&nbsp;
+
+	<span id="dsd1"><INPUT TYPE="checkbox" NAME="__dan_1" id="__dan_1"></span>
+	<span id="dsd2"><INPUT TYPE="checkbox" NAME="__dan_2" id="__dan_2"></span>
+	<span id="dsd3"><INPUT TYPE="checkbox" NAME="__dan_3" id="__dan_3"></span>
+	<span id="dsd4"><INPUT TYPE="checkbox" NAME="__dan_4" id="__dan_4"></span>
+    </span><span id="dan2"></span><br>
+		<span id="shuang1">
+
+		<span id="ss10">    <INPUT TYPE="checkbox" NAME="__shuang_chu" ID="__shuang_chu" onclick="__ss.__showdis(this,'__shuang_qu');">除<INPUT TYPE="checkbox" NAME="__shuang_qu" ID="__shuang_qu" onclick="__ss.__showdis(this,'__shuang_chu');">取(<dl>双</dl>)</span>&nbsp;
+
+	<span id="dss1"><INPUT TYPE="checkbox" NAME="__shuang_1" id="__shuang_1"></span>
+	<span id="dss2"><INPUT TYPE="checkbox" NAME="__shuang_2" id="__shuang_2"></span>
+	<span id="dss3"><INPUT TYPE="checkbox" NAME="__shuang_3" id="__shuang_3"></span>
+	<span id="dss4"><INPUT TYPE="checkbox" NAME="__shuang_4" id="__shuang_4"></span></span>&nbsp;<span id="shuang2"></span>
+                        </td>
+                    </tr>
+            </table><br>
+            <CENTER><button TYPE="button" onclick="loging();return false;" id="setsoonclass1" name="setsoonclass1" class="number_count number_w3" >生成</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button TYPE="reset" onclick="__reset();" id="setsoonclass2" name="setsoonclass2" class="number_count number_w3" >复位</button></CENTER>
+            <input type="hidden" name="selectlogsclassid" id="selectlogsclassid" >
+            <input type="hidden" name="selectnumber" id="selectnumber" >
+            <input type="hidden" name="selectnumbertotal" id="selectnumbertotal" >
+            <input type="hidden" name="selectnumbertotal_hidden" id="selectnumbertotal_hidden" >
+            <input type="hidden" name="selectlogs" id="selectlogs" >
+            <input type="hidden" name="zjzc" id="zjzc" >
+            </form>
+            <span id="testshow"></span>
+
+        </td>
+    <tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	//window.setTimeout(getSetSoonInfo(),300);
+	//getSetSoonInfo();
+    function getclassid(s){
+		document.getElementById('selectlogsclassid').value=s;
+        for(i=1;i<=6;i++){
+            if($("top_"+i))$("top_"+i).className="top_1";
+        }
+        $("top_"+s).className="top_2";
+        if(s==3)$("sss1").style.display="";else $("sss1").style.display="none";
+    }
+   
+     
+
+
+var __k ={
+	Arrid:Array(),
+	limitArray:["__dingwei_1","__dingwei_2","__dingwei_3","__dingwei_4","__hefenzhide_1","__hefenzhide_2","__hefenzhide_3","__hefenzhide_4","__bdwhefen","__paichu","__fushi_1","__fushi_2","__fushi_3","__fushi_4","__fushi_5","__fushi_6","__han_1","__han_2","__han_3","__han_4","__han_5","__fhan_6","__duishu_1","__duishu_2","__duishu_3"],
+	gid:'',
+	mid:'0',
+	p:[],
+	n:"key",
+	sn:"showkey",//显示的ID
+	tn:"",//选择的obj
+	_$:function (n){
+		return document.getElementById(n);
+	},
+	_limit:function(tn,nn,name){
+	    if(this.limitArray.indexOf(name)==-1)return true;//如果没有限制，则写入重复
+        if(tn.indexOf(nn)!=-1){
+            return false;
+        }else{
+            return true;
+        }
+	},
+	_a:function (v,n){//添加新值
+	    if(this._limit(this.tn.value,v,this.tn.name))
+		this.tn.value += v;
+	},
+	//退格
+	_s:function (n){
+		var l=this.tn.value.length;
+		var num=this.tn.value.substr(0,l-1);
+		this.tn.value=num;
+	},
+	//关闭
+	_o:function (){
+		this._$(this.sn).style.display="none";
+		if(this.tn)this.tn.style.background="#ffffff";
+	},
+	//显示
+	_b:function (n){
+		if(this.tn)this.tn.style.background="#ffffff";
+		this.tn=n;
+		this.tn.style.background="#ffcccc";
+		this._p(n);
+		this._$(this.sn).style.display="none";
+		this._$(this.sn).style.top = this.p.y+"px";
+		//this._$(this.sn).style.left = this.p.y+"px";
+		this._$(this.sn).style.display="block";
+		this.tn.blur();//不要加载手机键盘
+	},
+	_p:function (ATarget){ //点击显示键盘位置
+		var a=[];
+		var target = ATarget;		
+		var pos = {
+		   x: target.offsetLeft,
+		   y: target.offsetTop
+		};
+		var target = target.offsetParent;
+		while (target)
+		{
+			pos.x += target.offsetLeft;
+			pos.y += target.offsetTop;
+			
+			target = target.offsetParent
+		}        
+		var a = {
+		   x: pos.x+30,
+		   y: pos.y+30
+		};
+
+		this.p=a;
+	},
+	_int:function (n){
+		//this.gid = this.n+n;
+		var _keynumberhtml = "\n"
+		+ "<table id=\"mainkey\" style=\"width:100%;position:relative;\" cellpadding=\"2\" cellspacing=\"0\" align=\"center\" border=\"2\" bordercolor=\"#FFFFFF\"><tbody><tr>\n"
+		+ "<td id=\"key\" onclick=\"__k._a(\'1\','"+n+"');\">1</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'2\','"+n+"');\">2</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'3\','"+n+"');\">3</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'4\','"+n+"');\">4</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'5\','"+n+"');\">5</td>"
+		+ "<td id=\"key\" onclick=\"__k._s('"+n+"');\">退格</td></tr>\n"
+		+ "</tr><tr>\n"       
+		+ "<td id=\"key\" onclick=\"__k._a(\'6\','"+n+"');\">6</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'7\','"+n+"');\">7</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'8\','"+n+"');\">8</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'9\','"+n+"');\">9</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'0\','"+n+"');\">0</td>"
+		+ "<td id=\"key\" onclick=\"__k._a(\'.\','"+n+"');\">.</td></tr><tbody>\n"
+		+ "</table>\n"
+		+ "\n";
+		this._$("showkey").innerHTML=_keynumberhtml;
+		//document.write (_keynumberhtml);
+	}
+}
+
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function keyBT(t){
+	__k._b(t);
+}
+__k._int();
+
+window.onload=function(){
+	var obj=document.getElementsByTagName('input');
+	for(var i=0;i<obj.length;i++){
+		var td = obj[i];
+		if(td.type=="text")
+		td.setAttribute("onclick","keyBT(this)");		
+	}
+}
+document.body.onclick=function(e){
+	var name = e.srcElement.tagName;
+	var type = e.srcElement.type;
+	if(/span|text/i.test(type)){  //不关闭
+	
+	}else if(name!=undefined && e.target.id!="key"){ //点击所有地方关闭
+		__k._o();
+	}
+};
+
+//-->
+</SCRIPT>
+</body>
+
+</html>

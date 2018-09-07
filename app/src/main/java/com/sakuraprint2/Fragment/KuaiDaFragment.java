@@ -381,9 +381,10 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.btn_tuima:
 
+                stringBuffer = new StringBuffer();
+
                 for (int i = 0; i < kuaiDaXiaZhuAdapter.getDatas().size(); i++) {
                     if (9 == kuaiDaXiaZhuAdapter.getDatas().get(i).getT_status()) {
-                        stringBuffer = new StringBuffer();
                         if (stringBuffer.length() > 0) {
                             stringBuffer.append(",");
                             stringBuffer.append(kuaiDaXiaZhuAdapter.getDatas().get(i).getId());
@@ -394,6 +395,8 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
                 }
 
                 Log.e("KuaiDaFragment", stringBuffer.toString());
+
+                tuima(stringBuffer.toString());
 
                 break;
             default:
@@ -415,6 +418,7 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
             public void onMySuccess(String result) {
                 Log.e("tuima", result);
                 try {
+
 
 
                     result = null;
@@ -522,6 +526,9 @@ public class KuaiDaFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
+
+
+
 
 
 }

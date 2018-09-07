@@ -32,12 +32,14 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_dingweizhichu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="除"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_dingweizhiqu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="取"
@@ -60,12 +62,14 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_peishuchu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="除"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_peishuqu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="取"
@@ -94,6 +98,7 @@
                     android:textSize="@dimen/x10" />
 
                 <EditText
+                    android:id="@+id/et_qian"
                     android:layout_width="@dimen/x70"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -106,6 +111,7 @@
                     android:textSize="@dimen/x10" />
 
                 <EditText
+                    android:id="@+id/et_bai"
                     android:layout_width="@dimen/x70"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -130,6 +136,7 @@
                     android:textSize="@dimen/x10" />
 
                 <EditText
+                    android:id="@+id/et_shi"
                     android:layout_width="@dimen/x70"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -142,6 +149,7 @@
                     android:textSize="@dimen/x10" />
 
                 <EditText
+                    android:id="@+id/et_ge"
                     android:layout_width="@dimen/x70"
                     android:layout_height="wrap_content"
                     android:inputType="number" />
@@ -172,12 +180,14 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_hefenchu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="除"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_hefenqu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="取"
@@ -211,26 +221,31 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check11"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <EditText
+                        android:id="@+id/et_num1"
                         android:layout_width="@dimen/x70"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
@@ -258,26 +273,31 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check21"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <EditText
+                        android:id="@+id/et_num2"
                         android:layout_width="@dimen/x70"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
@@ -305,26 +325,31 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check31"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <EditText
+                        android:id="@+id/et_num3"
                         android:layout_width="@dimen/x70"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
@@ -352,26 +377,31 @@
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check41"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check42"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check43"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <CheckBox
+                        android:id="@+id/cb_check44"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/x10" />
 
                     <EditText
+                        android:id="@+id/et_num4"
                         android:layout_width="@dimen/x70"
                         android:layout_height="wrap_content"
                         android:inputType="number" />
